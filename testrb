@@ -84,4 +84,6 @@ end
 
 cmd = "pabot --processes " + options.processes + " --testlevelsplit --variablefile ./Properties/" + options.environment + "_env_variables.py --variable remote_url: --outputdir=./output --exclude exclude --" + options.fileType + " '" + test_case_name.chop + "' ."
 
+puts "Executing " << cmd
+
 Dir.chdir("#{ENV['HOME']}/di-automation"){system(cmd)}
